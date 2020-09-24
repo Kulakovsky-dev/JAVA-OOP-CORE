@@ -32,19 +32,20 @@ public class Start {
 
      // Телефонный справочник...
 
-        new Phone();
-        Phone.Add("111111111","Иванов");
-        Phone.Add("222222222","Петров");
-        Phone.Add("333333333","Сидоров");
-        Phone.Add("444444444","Петров");
-        Phone.Add("555555555","Иванов");
-        Phone.Add("666666666","Кузькин");
-        Phone.Print();
-        Phone.Get("Иванов");
-        Phone.Get("Петров");
-        Phone.Get("Сидоров");
-        Phone.Get("Кузькин");
-        Phone.Get("ААААААА");
+        Phone phonebook = new Phone();
+
+        phonebook.add("Иванов","11111111");
+        phonebook.add("Петров","22222222");
+        phonebook.add("Сидоров","33333333");
+        phonebook.add("Петров","44444444");
+        phonebook.add("Иванов","55555555");
+        phonebook.add("Кузькин","66666666");
+
+        System.out.println(phonebook.get("Иванов"));
+        System.out.println(phonebook.get("Петров"));
+        System.out.println(phonebook.get("Сидоров"));
+        System.out.println(phonebook.get("Кузькин"));
+        System.out.println(phonebook.get("ААААААА"));
 
     }
 }

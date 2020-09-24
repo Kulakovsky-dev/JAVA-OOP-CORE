@@ -5,7 +5,41 @@ import java.util.Arrays;
 public class Start {
     private static final int DIMENSION = 4;
 
-    private static void calcArray(String[][] arr) throws MyArraySizeException, MyArrayDataException {
+        public static void main(String[] args) {
+        String array[][];
+
+        // Тест 1
+        array = new String[][] {{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
+        try {
+            System.out.println("Сумма в массиве = " + calcArray(array) + "\n");
+        } catch(MyArraySizeException e) {
+            System.out.println("No sucess \n");
+        } catch(MyArrayDataException e) {
+            System.out.println("No sucess \n ");
+        }
+
+        // Тест Array2
+        array = new String[][] {{"1", "2", "3", "4"}, {"5", "6", "A", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
+        try {
+            System.out.println("Сумма в массиве = " + calcArray(array) + "\n");
+        } catch(MyArraySizeException e) {
+            System.out.println("No sucess \n ");
+        } catch(MyArrayDataException e) {
+            System.out.println("No sucess \n ");
+        }
+
+        // Тест Array3
+        array = new String[][] {{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}};
+        try {
+            System.out.println("Сумма в массиве = " + calcArray(array) + "\n");
+        } catch(MyArraySizeException e) {
+            System.out.println("No sucess \n ");
+        } catch(MyArrayDataException e) {
+            System.out.println("No sucess \n ");
+        }
+    }
+
+    public static int calcArray(String[][] arr) throws MyArraySizeException, MyArrayDataException {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(Arrays.toString(arr[i]));
         }
@@ -21,41 +55,9 @@ public class Start {
                     throw new MyArrayDataException("В ячейке ["+i+','+j+"]=" + arr[i][j] + " -> не число...");
                 }
             }
-        }
-        System.out.println("Сумма в массиве = " + sum + '\n');
+        };
+        System.out.println("Сумма в массиве = " + sum);
+        return sum;
     }
 
-    public static void main(String[] args) {
-        String array[][];
-
-        // Тест 1
-        array = new String[][] {{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
-        try {
-            calcArray(array);
-        } catch(MyArraySizeException e) {
-            System.out.println("No sucess \n");
-        } catch(MyArrayDataException e) {
-            System.out.println("No sucess \n ");
-        }
-
-        // Тест Array2
-        array = new String[][] {{"1", "2", "3", "4"}, {"5", "6", "A", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "16"}};
-        try {
-            calcArray(array);
-        } catch(MyArraySizeException e) {
-            System.out.println("No sucess \n ");
-        } catch(MyArrayDataException e) {
-            System.out.println("No sucess \n ");
-        }
-
-        // Тест Array3
-        array = new String[][] {{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}};
-        try {
-            calcArray(array);
-        } catch(MyArraySizeException e) {
-            System.out.println("No sucess \n ");
-        } catch(MyArrayDataException e) {
-            System.out.println("No sucess \n ");
-        }
-    }
 }

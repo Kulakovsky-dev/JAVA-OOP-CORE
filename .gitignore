@@ -1,3 +1,4 @@
 target
 .idea
 *.iml
+/src/main/java/ru/geekbrains/java/oop/core/lesson3/online/
