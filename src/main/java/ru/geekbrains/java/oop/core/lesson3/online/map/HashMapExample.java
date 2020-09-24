@@ -34,10 +34,14 @@ public class HashMapExample {
         //Получение ключей/значений
         humanCatHashMap.put(kate,barsic);
 
+        System.out.println("---1");
+
         Set<Human> humans = humanCatHashMap.keySet();
         System.out.println(humans);
         Collection<Cat> values = humanCatHashMap.values();
         System.out.println(values);
+
+        System.out.println("---2");
 
         //Удаление элементов
 

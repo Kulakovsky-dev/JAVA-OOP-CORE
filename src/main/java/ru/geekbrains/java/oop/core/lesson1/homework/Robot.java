@@ -5,7 +5,7 @@ public class Robot {
     private int jumpLimit;
     private int runLimit;
 
-    Robot(String name, int runlimit, int jumplimit){
+    public Robot(String name, int runlimit, int jumplimit){
         this.name = name;
         this.runLimit = runlimit;
         this.jumpLimit = jumplimit;

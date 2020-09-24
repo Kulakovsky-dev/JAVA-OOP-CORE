@@ -5,7 +5,7 @@ public class Cat {
     private int jumpLimit;
     private int runLimit;
 
-    Cat(String name, int runlimit, int jumplimit)
+    public Cat(String name, int runlimit, int jumplimit)
     {   this.name = name;
         this.runLimit = runlimit;
         this.jumpLimit = jumplimit;
