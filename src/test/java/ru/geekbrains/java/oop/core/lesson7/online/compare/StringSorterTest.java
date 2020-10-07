@@ -81,6 +81,7 @@ class StringSorterTest {
 
     @Test
     void genericQuiz() {
+
         List<String> list1 = new ArrayList();
         List<String> list2 = new ArrayList<>();
         List strings = new ArrayList<String>();
